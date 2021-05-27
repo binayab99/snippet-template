@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+a {
+  display: inline-block;
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.bg-image {
+  background: no-repeat center/cover url("/Assets/Background.png");
+}
+
+.container {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(min(90%, 70.5rem));
+}
+
+.code-image {
+  margin-top: 2rem;
+  height: 400px;
+  width: calc(min(100%, 70.5rem));
+  background: no-repeat bottom/contain url("/Assets/Snippet\ Image.png");
+
+  @media (max-width: 1000px) {
+    height: 200px;
+  }
+
+  @media (max-width: 700px) {
+    height: 150px;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+  background: no-repeat center/contain url("/Assets/Logo.svg");
+}
+
+.search {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: no-repeat center/contain url("/Assets/Search\ Icon.svg");
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.get-started {
+  color: white;
+  background-color: black;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+
+  span {
+    color: gray;
+  }
+}
+
+header > .container {
+  padding-block: 2rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: auto;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  width: 24px;
+  height: 20px;
+  background: no-repeat center/contain url("/Assets/Hamburger\ Menu.svg");
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+}
+
+.hero > .container {
+  align-items: center;
+  text-align: center;
+
+  & > p:first-of-type {
+    max-width: 40rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.editor > .container {
+  margin-block: 4rem;
+  flex-direction: row;
+
+  .text {
+    flex: 60%;
+    margin-block: auto;
+  }
+
+  .image {
+    flex: 40%;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+}
+
+.editor-image {
+  width: calc(min(90%, 30rem));
+  height: 400px;
+  background: no-repeat right/contain url("/Assets/Customizable\ Image.png");
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+footer > .container {
+  margin-block: 2rem;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .links > a:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
